@@ -1,15 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://buply2d64tunx"]
+[gd_scene load_steps=3 format=3 uid="uid://buply2d64tunx"]
 
 [ext_resource type="Texture2D" uid="uid://ssaec7c5l2rj" path="res://huis.png" id="1_4tcqs"]
+[ext_resource type="Script" path="res://Button.gd" id="1_pp14d"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Button" type="Button" parent="."]
-offset_left = 710.0
-offset_top = 160.0
-offset_right = 718.0
-offset_bottom = 168.0
+offset_left = 850.0
+offset_top = 464.0
+offset_right = 858.0
+offset_bottom = 472.0
 scale = Vector2(11.3787, 11.1101)
+script = ExtResource("1_pp14d")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Button"]
 visible = false
@@ -18,10 +20,10 @@ scale = Vector2(0.324366, 0.346003)
 texture = ExtResource("1_4tcqs")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 147.0
-offset_top = 144.0
-offset_right = 155.0
-offset_bottom = 152.0
+offset_left = 287.0
+offset_top = 448.0
+offset_right = 295.0
+offset_bottom = 456.0
 scale = Vector2(11.3787, 11.1101)
 
 [node name="Sprite2D3" type="Sprite2D" parent="Button2"]
@@ -31,10 +33,10 @@ scale = Vector2(0.285047, 0.258449)
 texture = ExtResource("1_4tcqs")
 
 [node name="Button3" type="Button" parent="."]
-offset_left = 321.0
-offset_top = 153.0
-offset_right = 329.0
-offset_bottom = 161.0
+offset_left = 461.0
+offset_top = 457.0
+offset_right = 469.0
+offset_bottom = 465.0
 scale = Vector2(11.3787, 11.1101)
 
 [node name="Sprite2D4" type="Sprite2D" parent="Button3"]
@@ -44,10 +46,10 @@ scale = Vector2(0.306946, 0.267495)
 texture = ExtResource("1_4tcqs")
 
 [node name="Button4" type="Button" parent="."]
-offset_left = 499.0
-offset_top = 150.0
-offset_right = 507.0
-offset_bottom = 158.0
+offset_left = 639.0
+offset_top = 454.0
+offset_right = 647.0
+offset_bottom = 462.0
 scale = Vector2(11.3787, 11.1101)
 
 [node name="Sprite2D" type="Sprite2D" parent="Button4"]
@@ -55,3 +57,7 @@ visible = false
 position = Vector2(3.95477, 3.78034)
 scale = Vector2(0.269921, 0.235194)
 texture = ExtResource("1_4tcqs")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="Button" method="_on_button_3_pressed"]
